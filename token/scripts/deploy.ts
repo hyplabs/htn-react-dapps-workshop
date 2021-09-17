@@ -3,7 +3,7 @@ import { ethers } from "hardhat"
 async function main() {
   // deploy Counter (simple - custom) contract
   const counterFactory = await ethers.getContractFactory('Counter')
-  let contract = await counterFactory.deploy()
+  const contract = await counterFactory.deploy()
   console.log('Counter Contract Address = ', contract.address)
   console.log('Counter Txn Hash = ', contract.deployTransaction.hash)
   console.log('Deployed By = ', contract.deployTransaction.from)

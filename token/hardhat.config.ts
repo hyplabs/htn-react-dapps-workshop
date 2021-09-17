@@ -18,11 +18,11 @@ const config: HardhatUserConfig = {
       // }]
     },
     rinkeby: {
-      url: 'https://rinkeby.infura.io/v3/01091511c975487ba99f221730a3ba08',
+      url: 'https://rinkeby.infura.io/v3/YOUR_API_KEY_HERE',
       accounts: [ /** private key here */ ],
     },
     ropsten: {
-      url: 'https://ropsten.infura.io/v3/01091511c975487ba99f221730a3ba08',
+      url: 'https://ropsten.infura.io/v3/YOUR_API_KEY_HERE',
       accounts: [ /** private key here */ ],
     },
   },
