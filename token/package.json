@@ -1,0 +1,35 @@
+{
+  "name": "NumberToken",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -b",
+    "deploy:hardhat": "npx hardhat run --network hardhat scripts/deploy.ts",
+    "deploy:rinkeby": "npx hardhat run --network rinkeby scripts/deploy.ts",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@typechain/ethers-v5": "^7.0.1",
+    "@types/chai": "^4.2.21",
+    "@types/chai-as-promised": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.7.10",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.6",
+    "hardhat": "^2.6.2",
+    "ts-generator": "^0.1.1",
+    "ts-node": "^10.2.1",
+    "typechain": "^5.1.2",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.1",
+    "@typechain/hardhat": "^2.3.0"
+  }
+}
