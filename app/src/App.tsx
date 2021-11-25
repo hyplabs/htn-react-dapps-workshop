@@ -16,8 +16,8 @@ const WalletApp = () => {
   const { chainId, account, activate, deactivate, active, library } = useWeb3React<Web3Provider>()
 
   // auto-connect connect to the injected ethereum provider, if it exists and has granted access already
-  // const triedEager = useEagerConnect()
-  // useInactiveListener(!triedEager)
+  const triedEager = useEagerConnect()
+  useInactiveListener(!triedEager)
 
   useEffect(() => {
     if (!contractAddress) {
@@ -34,6 +34,8 @@ const WalletApp = () => {
   const _getCount = async () => {
     if (active && !!contract) {
       try {
+        console.log("_getCount")
+        console.log(contract)
         const resp = await contract?.functions.getCount()
         console.log(resp)
       } catch (err) {
@@ -45,7 +47,22 @@ const WalletApp = () => {
   const _countUp = async () => {
     if (active && !!contract) {
       try {
+        console.log("_countUp")
+        console.log(contract)
         const resp = await contract?.functions.countUp()
+        console.log(resp)
+      } catch (err) {
+        console.error(err)
+      }
+    }
+  }
+
+  const _countDown = async () => {
+    if (active && !!contract) {
+      try {
+        console.log("_countDown")
+        console.log(contract)
+        const resp = await contract?.functions.countDown()
         console.log(resp)
       } catch (err) {
         console.error(err)
@@ -66,6 +83,7 @@ const WalletApp = () => {
           <br />
           <button onClick={_getCount}>Get Count</button>
           <button onClick={_countUp}>Count Up</button>
+          <button onClick={_countDown}>Count Down</button>
         </div>
       ) : (
         <button type="button" onClick={_connectToMetamask}>
