@@ -16,6 +16,15 @@ Then in another terminal window and from the `./token` directory, run the follow
 npx hardhat run --network hardhat scripts/deploy.ts
 ```
 
+The typechain directory can be taken directly from smart contracts repository. 
+If necessary, generating the right typechain interfaces depends on which framework you are using i.e truffle or openzeppelin.
+In the case you are using the OpenZeppelin framework run:
+```
+npx hardhat typechain
+```
+in the root of the project directory will genetrate the typechain directory with interfaces in that directory
+
+
 The above command will deploy the smart contracts locally via `Hardhat` and print the smart contract address to console, you need to set the smart contract address as an env var for the app. Go to the `./app` directory then run the following command
 
 ```
