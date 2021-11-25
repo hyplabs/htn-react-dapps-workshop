@@ -31,7 +31,17 @@ The above command will deploy the smart contracts locally via `Hardhat` and prin
 cp .env.example .env
 ```
 
-Open the new `.env` file and set the `REACT_APP_SMART_CONTRACT_ADDRESS` variable to the value obtained when launching the smart contract. Then run the app with the following command
+Open the new `.env` file and set the `REACT_APP_SMART_CONTRACT_ADDRESS` variable to the value obtained when launching the smart contract.
+
+Now, go back to the `/token` directory and run the following three commands to copy necessary files over to the `/app` directory.
+
+```
+cp -r typechain ../app/src
+cp -r artifacts ../app/src
+cp -r cache ../app/src
+```
+
+Then run the app with the following command
 
 ```
 yarn start
@@ -42,13 +52,13 @@ yarn start
 
 * [`Web3-React`](https://github.com/NoahZinsmeister/web3-react)
     * Can use injected `web3` directly if you prefer but `web3-react` simplifies some React related features
-* [`Ethers.js`](#)
-* [`Hardhat`](#)
+* [`Ethers.js`](https://docs.ethers.io/v5/)
+* [`Hardhat`](https://hardhat.org/getting-started/)
     * Can run an Ethereum network on localhost
     * Alternatively, use [`Ganache`](https://www.trufflesuite.com/ganache) from the `truffle-suite` instead
-* [`Typechain`](#)
+* [`Typechain`](https://github.com/dethcrypto/TypeChain)
     * To auto-generate Typescript interfaces for smart contracts and a useful CLI for deploying the contract
-* [`Truffle`](#)
+* [`Truffle`](https://trufflesuite.com/)
     * For easy smart contract testing
-* [`AntDesign`](#)
+* [`AntDesign`](https://ant.design/components/overview/)
     * Nice looking components, not related to any blockchain stuff
