@@ -16,7 +16,8 @@ Then in another terminal window and from the `./token` directory, run the follow
 npx hardhat run --network hardhat scripts/deploy.ts
 ```
 
-The typechain directory can be taken directly from button-tranche repo. Generating the right typechain interfaces depends on which framework you are using i.e truffle or openzeppelin.
+The typechain directory can be taken directly from smart contracts repository. 
+If necessary, generating the right typechain interfaces depends on which framework you are using i.e truffle or openzeppelin.
 In the case you are using the OpenZeppelin framework run:
 ```
 npx hardhat typechain
