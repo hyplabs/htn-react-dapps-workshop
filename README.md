@@ -31,7 +31,7 @@ The above command will deploy the smart contracts locally via `Hardhat` and prin
 cp .env.example .env
 ```
 
-Open the new `.env` file and set the `REACT_APP_SMART_CONTRACT_ADDRESS` variable to the value obtained when launching the smart contract. 
+Open the new `.env` file and set the `REACT_APP_SMART_CONTRACT_ADDRESS` variable to the value obtained when launching the smart contract.
 
 Now, go back to the `/token` directory and run the following three commands to copy necessary files over to the `/app` directory.
 
