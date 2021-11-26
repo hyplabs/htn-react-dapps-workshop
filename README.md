@@ -13,7 +13,21 @@ npx hardhat node
 Then in another terminal window and from the `./token` directory, run the following
 
 ```
-npx hardhat run --network hardhat scripts/deploy.ts
+npx hardhat run --network localhost scripts/deploy.ts
+```
+
+To verify that the contract deployed, go back to the first window where the hardhat node is running.
+You should see something like the below. If you do not, then the contract did not deploy.
+
+```
+eth_sendTransaction
+  Contract deployment: Counter
+  Contract address:    0x5fbdb2315678afecb367f032d93f642f64180aa3
+  Transaction:         0xf761a15e1683b7273f73a4d6ab8f7f95ba01fd06128cef3fc7aa98bc248b1e09
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  Value:               0 ETH
+  Gas used:            383269 of 383269
+  Block #1:            0x74cafb4c31fcf5f2ba9d95140d6d7c42fae301f9d08407cbdeb1348af8166778
 ```
 
 The typechain directory can be taken directly from smart contracts repository. 
@@ -41,9 +55,10 @@ cp -r artifacts ../app/src
 cp -r cache ../app/src
 ```
 
-Then run the app with the following command
+Then run the app with the following commands
 
 ```
+yarn
 yarn start
 ```
 
